@@ -449,7 +449,7 @@ $request_full_url = (!empty($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SER
 
 
 		function confirmDelete(fileName) {
-			document.getElementById('text-alert').innerText = "Are you sure you want to delete the file " + fileName + "?";
+			document.getElementById('text-alert').innerText = "Are you sure you want to delete the file " + decodeURIComponent(fileName) + "?";
 			document.getElementById('custom-alert').style.display = 'block';
 			document.getElementById('confirm_buttons').style.display = 'block';
 
